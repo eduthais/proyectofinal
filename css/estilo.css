@@ -1,0 +1,151 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header {
+  height: 120px;
+  justify-items: start;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo navbar"; }
+  header .logo {
+    grid-area: logo; }
+  header .navbar {
+    width: 90%;
+    height: 50px;
+    grid-area: navbar;
+    align-self: center;
+    justify-self: end;
+    justify-content: center; }
+
+body {
+  background-color: #f5d7f5;
+  width: 95%;
+  align-content: center;
+  margin: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+.colorVioleta {
+  background-color: #ad5bad; }
+
+h1 {
+  color: #864686; }
+
+.welcome {
+  text-align: center;
+  color: black; }
+
+.padre {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
+  grid-template-areas: "hijo1 centro1 hijo2" "hijo3 centro2 hijo4";
+  column-gap: 10px;
+  row-gap: none;
+  justify-items: space-between;
+  border: none; }
+  .padre .hijo1 {
+    grid-area: hijo1;
+    text-align: center;
+    background-color: #ecb8ec; }
+  .padre .centro1 {
+    grid-area: centro1;
+    text-align: center; }
+  .padre .hijo2 {
+    grid-area: hijo2;
+    text-align: center;
+    background-color: #ecb8ec; }
+  .padre .hijo3 {
+    grid-area: hijo3;
+    background-color: #ecb8ec; }
+  .padre .centro2 {
+    grid-area: centro2; }
+  .padre .hijo4 {
+    grid-area: hijo4;
+    background-color: #ecb8ec; }
+
+.mb-3 {
+  width: 30%;
+  margin: 30px; }
+  .mb-3 .colorBotón {
+    color: purple;
+    align-self: center; }
+
+.madre {
+  width: 80%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: videoYoga textoYoga;
+  column-gap: 10px; }
+  .madre .videoyoga {
+    grid-area: videoYoga; }
+  .madre .textoYoga {
+    grid-area: textoYoga; }
+
+.madre2 {
+  width: 80%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: videoMeditación textoMeditación;
+  column-gap: 10px; }
+  .madre2 .videoMeditación {
+    grid-area: videoMeditación; }
+  .madre2 .textoMeditación {
+    grid-area: textoMeditación; }
+
+.madre3 {
+  width: 80%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: videoTerapias textoTerapias;
+  column-gap: 10px; }
+  .madre3 .videoMeditación {
+    grid-area: videoTerapias; }
+  .madre3 .textoMeditación {
+    grid-area: textoTerapias; }
+
+@media (min-width: 360px) and (max-width: 700px) {
+  .carousel {
+    width: 350px; }
+  .párrafo {
+    width: 350px; }
+  .padre {
+    width: 95%;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "hijo1" "hijo3" "centro1" "centro2" "hijo2" "hijo4";
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-items: stretch; }
+  .hijo1 {
+    grid-area: hijo1; }
+  .hijo3 {
+    grid-area: hijo3; }
+  .centro1 {
+    grid-area: centro1; }
+  .centro2 {
+    grid-area: centro2; }
+  .hijo2 {
+    grid-area: hijo2; }
+  .hijo4 {
+    grid-area: hijo4; }
+  .comunícate {
+    width: 95%; }
+  .mb-3 {
+    width: 95%; } }

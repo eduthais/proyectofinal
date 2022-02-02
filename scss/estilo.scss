@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import "./base/color";
+header{
+    height: 120px;
+    justify-items: start;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "logo navbar";
+        .logo{
+            grid-area: logo;
+        }
+        .navbar{
+            width: 90%;
+            height: 50px;
+            grid-area: navbar;
+            align-self: center;
+            justify-self: end;
+            justify-content: center;
+        }
+}
+body{
+    background-color: $color_bg;
+    width: 95%;
+    align-content: center;
+    margin: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.colorVioleta{
+    background-color: $color_nav;
+}
+h1{
+    color: $color_h1
+}
+.welcome{
+    text-align: center;
+    color: $color_h2
+}
+.padre{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+    "hijo1 centro1 hijo2"
+    "hijo3 centro2 hijo4";
+    column-gap: 10px;
+    row-gap: none;
+    justify-items: space-between;
+    border: none;
+    .hijo1{
+        grid-area: hijo1;
+        text-align: center;
+        background-color: $color_tiras;
+    }
+    .centro1{
+        grid-area: centro1;
+        text-align: center
+    }
+    .hijo2{
+        grid-area: hijo2;
+        text-align: center;
+        background-color: $color_tiras;
+    }
+    .hijo3{
+        grid-area: hijo3;
+        background-color: $color_tiras;
+    }
+    .centro2{
+        grid-area: centro2;
+    }
+    .hijo4{
+        grid-area: hijo4;
+        background-color: rgb(236, 184, 236);
+    }
+}
+.mb-3{
+    width: 30%;
+    margin: 30px;
+    
+    .colorBotón{
+        color: purple; 
+        align-self: center;
+        
+    }
+}
+.madre{
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    videoYoga textoYoga;
+    column-gap: 10px;
+        .videoyoga{
+            grid-area: videoYoga;
+        }
+        .textoYoga{
+            grid-area: textoYoga;
+        }
+}
+.madre2{
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    videoMeditación textoMeditación;
+    column-gap: 10px;
+        .videoMeditación{
+            grid-area: videoMeditación;
+        }
+        .textoMeditación{
+            grid-area: textoMeditación;
+        }
+}
+.madre3{
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    videoTerapias textoTerapias;
+    column-gap: 10px;
+        .videoMeditación{
+            grid-area: videoTerapias;
+        }
+        .textoMeditación{
+            grid-area: textoTerapias;
+        }
+}
+@media (min-width: 360px) and (max-width: 700px) {
+    .carousel{
+        width: 350px
+        }   
+    .párrafo{
+        width: 350px
+        }
+    .padre{
+        width: 95%;
+        padding: 5px;
+        margin: 5px;
+        border: none;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "hijo1"
+        "hijo3"
+        "centro1"
+        "centro2"
+        "hijo2"
+        "hijo4";
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-items:stretch;
+        }
+            .hijo1{
+                grid-area: hijo1;
+            }
+            .hijo3{
+                grid-area: hijo3;
+            }
+            .centro1{
+                grid-area: centro1;
+            }
+            .centro2{
+                grid-area: centro2;
+            }
+            .hijo2{
+                grid-area: hijo2;
+            }
+            .hijo4{
+                grid-area: hijo4;
+            }
+    .comunícate{
+        width: 95%;
+            }
+    .mb-3{
+        width: 95%
+            }
+    }
